@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+ 
+int main()
+{
+    double A, B, C, x[2], delta;
+ 
+    scanf("%lf %lf %lf", &A, &B, &C);
+if(A==0){
+    printf("Impossivel calcular\n");
+}else{
+    delta=(B*B)-4*A*C;
+    if(0>delta){
+        printf("Impossivel calcular\n");
+    }else{
+        x[1]=(-B+sqrt(delta))/(2*A);
+        x[2]=(-B-sqrt(delta))/(2*A);
+            printf("R1 = %.5lf\nR2 = %.5lf\n", x[1], x[2]);
+    }
+}
+    return 0;
+}
